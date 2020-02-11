@@ -1,0 +1,40 @@
+.header {
+     position: -webkit-sticky; 
+     position: sticky; 
+     top: 0; 
+     z-index: 1;
+}
+
+.form-search{
+     width: 80%;
+
+}
+
+.form-search input{
+     width: 60% !important;
+} 
+.autocomplete-list{
+     width:60%;
+     top:42px;
+     background: #FFFFFF;
+}
+.sub-list-search{
+     padding: 10px;
+     
+}
+.sub-list-search:hover, .sub-list-search:focus{
+     background: blue;
+     cursor: pointer;
+}
+
+.nav{
+     z-index: 1;
+     background-color: white;
+}
+.navbar .btn{
+     height: 80% !important;
+}
+
+.navbar .dropdown-menu a {
+     padding: -20px;
+}

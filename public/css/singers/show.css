@@ -1,0 +1,26 @@
+.background-singer{
+  position: relative;
+}
+.background-img-singer{
+  object-fit: cover;
+  height: 220px;
+  width: 100%;
+  border-radius: 15px; 
+}
+.abtract-singer{
+  margin-top: 70px;
+}
+.wrapper-singer-img{
+  position: absolute;
+  border-radius: 50%;
+  background-color: bisque;
+  width: 200px;
+  height: 200px;
+  top: 84px;
+  padding: 10px;
+  left: 43px;
+}
+.singer-img{
+  width: 100%;
+  border-radius: 50%;
+}

@@ -1,0 +1,144 @@
+.font-weight-bold{
+    font-weight: 700 !important;
+}
+.w-100{
+    width: 100% !important;
+}
+.mx-3{
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+}
+.md-form{
+    position: relative;
+    margin-top: 1.5rem;
+}
+.md-form .validate {
+    margin-bottom: 2.5rem;
+}
+.md-form .form-control{
+    height: auto;
+    padding: .6rem 0 .4rem 0;
+    margin: 0 0 .5rem 0;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.mb-5{
+    margin-bottom: 3rem !important;
+}
+.mb-4{
+    margin-bottom: 1.5rem !important;
+}
+.grey-text{
+    color: #9e9e9e!important;
+}
+.fas{
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+}
+.fas{
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+.md-form .prefix{
+    position: absolute;
+    transition: color .2s;
+}
+.md-form .prefix {
+    top: .25rem;
+    font-size: 1.75rem;
+}
+.md-form .prefix~label {
+    margin-left: 2.5rem;
+}
+.md-form .prefix~input, .md-form .prefix~textarea {
+    width: calc(100% - 2.5rem);
+    margin-left: 2.5rem;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.md-form input[type=password]:not(.browser-default),
+.md-form input[type=email]:not(.browser-default),
+.md-form input[type=text]:not(.browser-default){
+    box-sizing: content-box;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ced4da;
+    border-radius: 0;
+    outline: 0;
+    box-shadow: none;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.input{
+    overflow: visible;
+}
+input[type="password" i] {
+    -webkit-text-security: disc !important;
+}
+.input {
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    -webkit-appearance: textfield;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 0px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+
+.btn {
+    margin: .375rem;
+    color: inherit;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    white-space: normal;
+    cursor: pointer;
+    border: 0;
+    border-radius: .125rem;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    padding: .84rem 2.14rem;
+    font-size: .6rem;
+}
+.btn, .btn:active, .btn:visited {
+    color: white !important;
+    background-color: #8064A2 !important;
+}
+.btn:hover{
+    color: rgb(101, 80, 158) !important;
+    background-color: white !important;
+}
+
+.modal-content {
+    border: none;
+}

@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.col-sm-6 .left_container{
+    padding-left: 100px;
+}
+
+
+
+
+.col-sm-6{
+    text-align: center;
+    display: block;
+    padding-top: 100px;
+}
+
+.group_button{
+    text-align: center;
+}
+
+.img_album{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px 5px #ccc;
+}
+
+.right_title{
+    color: purple;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.img_like:hover{
+    cursor: pointer;
+    fill: blueviolet;
+}
+
+.img_like{
+    cursor: pointer;
+    margin-left: 20px;
+    height: 30px;
+    width: 30px;
+    transition: 0.5s;
+}
+
+.title_album{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.desc_album{
+    margin-top: 20px;
+    text-align: center;
+    color: gray;
+    font-size: 14px;
+}
+
+.music_component{
+    display: flex;
+    height: 40px;
+    transition:all 0.3s ease;
+}
+
+.music_component{   
+    transition: 0.3s;
+    display: flex;
+    width: 100%;
+    height: 60px;
+}
+
+.music_component:hover{
+    opacity: 1;
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.music_component:hover .music_name{
+    color: purple;
+}
+
+.music_num{
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.music_img{
+    margin-left: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.music_detail{
+    width: 200px;
+    margin-left: 10px;
+    margin-top: 9px;
+}
+
+.music_name{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.music_artist{
+    font-size: 12px;
+}
+
+.music_share_icon{
+    margin-top: 12px;
+    height: 30px;
+    width: 30px;
+}
+
+.music_like_icon{
+    margin-left: 20px;
+    margin-top: 12px;
+    height: 30px;
+    width: 30px;
+    transition: 0.1s;
+}
+
+.music_like_icon:hover{
+    height: 32px;
+    width: 32px;
+}
+
+.music_row{
+    align-items: center;
+    width: 500px;
+}
+
+.related_row{
+    display: flex;
+}
+
+.related_music{
+    margin-top: 50px;
+    padding-left: 200px;
+    color: purple;
+    font-weight: 600;
+}
+
+.related_row_img{
+    opacity: 0.9;
+    transition: .5s;
+    border-radius: 10px;
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.related_row_title{
+    margin-top: 5px;
+    font-weight: 400;
+    color: black;
+}
+
+.related_category{
+    width : 60%;
+    margin: auto;
+}
+
+.name-singer{
+    text-align: center;
+}
+
+.fillingspace{
+    width: 200px;
+}
+

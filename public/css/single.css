@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.containerchart{
+    height: 500px;
+}
+
+.rowsingle{
+    padding-bottom: 40px;
+}
+
+.btn, .btn:active, .btn:visited {
+    color: white !important;
+    background-color: #8064A2 !important;
+}
+
+.btn:hover{
+    color: orange !important;
+}
+
+/* .col-sm-6{
+    text-align: center;
+    display: block;
+    padding-top: 100px;
+} */
+
+.group_button{
+    text-align: center;
+}
+
+.img_album{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px 5px #ccc;
+}
+
+.right_title{
+    color: purple;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.img_like:hover{
+    cursor: pointer;
+    fill: blueviolet;
+}
+
+.img_like{
+    cursor: pointer;
+    margin-left: 20px;
+    height: 30px;
+    width: 30px;
+    transition: 0.5s;
+}
+
+.title_album{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.desc_album{
+    margin-top: 20px;
+    text-align: center;
+    color: gray;
+    font-size: 14px;
+}
+
+.music_component{
+    width: 100%;
+    display: flex;
+    height: 40px;
+    transition:all 0.3s ease;
+}
+
+.music_component{   
+    transition: 0.3s;
+    display: flex;
+    width: 100%;
+    height: 60px;
+}
+
+.music_component:hover{
+    opacity: 1;
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.music_component:hover .music_name{
+    color: purple;
+}
+
+.music_num{
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.music_img{
+    margin-left: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.music_detail{
+    width: 215px;
+    margin-left: 10px;
+    margin-top: 9px;
+}
+
+.music_name{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.music_artist{
+    font-size: 12px;
+}
+
+.music_share_icon{
+    margin-top: 12px;
+    height: 30px;
+    width: 30px;
+}
+
+.music_like_icon{
+    margin-top: 12px;
+    height: 30px;
+    width: 30px;
+    transition: 0.1s;
+}
+
+.music_like_icon:hover{
+    height: 32px;
+    width: 32px;
+}
+
+.music_row{
+    align-items: center;
+    width: 100%;
+}
+
+/* .related_row_fix{
+    display: flex;
+} */
+
+/* .related_music_fix{
+    margin-top: 50px;
+    padding-left: 200px;
+    color: purple;
+    font-weight: 600;
+}
+
+.related_row_img_fix{
+    opacity: 0.9;
+    transition: .5s;
+    border-radius: 10px;
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+} */
+/* 
+.related_row_title_fix{
+    margin-top: 5px;
+    font-weight: 400;
+    color: black;
+}
+
+.related_category_fix{
+    width : 60%;
+    margin: auto;
+}
+
+.name-singer_fix{
+    text-align: center;
+} */
+
+.fillingspacechart{
+    width: 80%;
+}
+
+.singlepage{
+    margin-top: 20px;
+}
+
+.fillingspace{
+    width: 20%;
+}
+
+.hot-category_fix{
+    padding-bottom: 50px;
+}
+
+.related_rowsingle_fix{
+    justify-content: center;
+    display: flex;
+}
+.btn {
+    margin: .375rem;
+    color: inherit;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    white-space: normal;
+    cursor: pointer;
+    border: 0;
+    border-radius: .125rem;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    padding: .8rem 2rem;
+    font-size: .7rem;
+}
+.btn, .btn:active, .btn:visited {
+    color: white !important;
+    background-color: #8064A2 !important;
+}
+.btn:hover{
+    color: rgb(101, 80, 158) !important;
+    background-color: white !important;
+}
+
+@media only screen and (max-width: 769px) {
+    .single-song .name-single{
+        z-index: 0;
+        position: absolute;
+      }
+}

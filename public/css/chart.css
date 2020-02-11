@@ -1,0 +1,149 @@
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+
+.chart-title{
+    font-size: 20px;
+    color: purple;
+}
+
+.chartrow{
+    padding: 40px;
+}
+
+.col-sm-8{
+    padding: 30px;
+}
+
+.chart-nav{
+    align-items: center;
+    justify-content: center;
+    background-color: purple;
+    width: 100%;
+    height: 40px;
+    display: flex;
+}
+
+.chart-nav-time{
+    color: white;
+}
+
+.music_component{
+    align-items: center;
+}
+
+.chart-nav-icon{
+    margin-left: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.music-chart-row{
+    width: 100%;
+}
+
+.music_num_1{
+    padding: 5px;
+    font-weight: bold;
+    align-items: center;
+    background-color: red;
+}
+
+.music_component{
+    margin-top: 10px;
+}
+
+.music_num_2{
+    padding: 5px;
+    font-weight: bold;
+    align-items: center;
+    background-color: yellow;
+}
+
+.music_num_3{
+    padding: 5px;
+    font-weight: bold;
+    align-items: center;
+    background-color: green;
+}
+
+.fillingspace{
+    background-color: red;
+    width: 70%;
+}
+
+.button-like{
+    width: 20px;
+    height: 20px;
+}
+
+.chart-nav-play{
+    cursor: pointer;
+    margin-left: 20px;
+    transition: 0.1s;
+}
+
+.chart-nav-play:hover{
+    color: white;
+    font-weight: bold;
+}
+
+.col-sm-4{
+    padding-top: 50px;
+}
+
+.hot-topic{
+    text-align: center;
+    font-size: 20px;
+    color: purple;
+}
+
+.related-chart-component{
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 80%;
+    height: 90px;
+}
+
+@media only screen and (max-width: 769px) {
+    .related-chart-component{
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+        cursor: pointer;
+        width: 200px;
+        height: 90px;
+    }
+  }
+/* .btn {
+    margin: .375rem;
+    color: inherit;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    white-space: normal;
+    cursor: pointer;
+    border: 0;
+    border-radius: .125rem;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    padding: .8rem 2rem;
+    font-size: .7rem;
+}
+.btn, .btn:active, .btn:visited {
+    color: white !important;
+    background-color: #8064A2 !important;
+}
+.btn:hover{
+    color: rgb(101, 80, 158) !important;
+    background-color: white !important;
+} */
+

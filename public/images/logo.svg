@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="801px" height="802px" viewBox="0 0 801 802" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>Beats Music logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="84.6015625%" y1="15.1305038%" x2="16.2998047%" y2="87.4194716%" id="linearGradient-1">
+            <stop stop-color="#CE0035" offset="0%"></stop>
+            <stop stop-color="#81008D" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="82.5815147%" y1="21.2852296%" x2="0%" y2="93.5181904%" id="linearGradient-2">
+            <stop stop-color="#BF0046" offset="0%"></stop>
+            <stop stop-color="#AE0058" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M291.17699,16.364407 L291.17699,232.58607 C322.75736,211.94756 360.46542,199.90508 401.01004,199.90508 C512.0535,199.90508 602.0822,289.93044 602.0822,400.98193 C602.0822,512.03342 512.0535,602.05944 401.01004,602.05944 C289.95855,602.05944 199.93052,512.03342 199.93052,400.98193 C199.93052,397.40962 200.03228,393.86141 200.21236,390.33329 L199.93052,55.240696 C80.993974,124.56461 1,253.39195 1,400.98193 C1,621.90262 180.09738,801 401.01807,801 C621.93609,801 801,621.90262 801,400.98193 C801,180.06391 621.93609,0.96653089 401.01807,0.96653089 C362.90766,0.96653089 326.09469,6.4093453 291.17699,16.364407 Z" id="Circle" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup"></path>
+        <path d="M356.585938,491.433598 C339.787109,480.611333 343.505859,465.253911 343.505859,465.253911 L343.505859,326.124999 C343.505859,326.124999 344.152343,307.884765 358.892578,300.947266 C373.632812,294.009766 385.795961,300.834544 400.021484,309.710937 C429.152343,330.792967 479.533203,369.273437 479.533203,369.273437 C479.533203,369.273437 525.412109,393.689822 479.533203,425.839054 C433.654297,457.988286 393.716797,487.490234 393.716797,487.490234 C393.716797,487.490234 373.384766,502.255864 356.585938,491.433598 Z" id="Triangle" fill="url(#linearGradient-2)" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>

@@ -1,0 +1,927 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+<!-- Bootstrap CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<link rel="stylesheet" href="/web-191/public/css/index.css">
+<link rel="stylesheet" href="/web-191/public/css/shared/navbar.css">
+<link rel="stylesheet" href="/web-191/public/css/modal.css">
+<link rel="stylesheet" href="/web-191/public/css/chart.css">
+<link rel="stylesheet" href="/web-191/public/css/playbottom.css">
+<link rel="stylesheet" href="/web-191/public/css/single.css"> 
+<!-- <link rel="stylesheet" href="/web-191/public/css/profile_single.css"> Xem lai class css -->
+
+<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+<title>SPOTIFY</title>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script></head>
+
+<body>
+  <div class="header" style="position: -webkit-sticky; position: sticky; top: 0; z-index: 2;">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand m-auto m-lg-unset" href="../home/index">
+        <img src="/web-191/public/images/logo.svg" width="50" height="50" alt="">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <form class="form-inline m-lg-auto form-search">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-light" type="submit">Search</button>
+          </form>
+      </div>
+      <div class="signed">
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Right-aligned menu
+          </button>
+          <div class="dropdown-menu dropdown-menu-right">
+            <button class="dropdown-item" type="button">Action</button>
+            <button class="dropdown-item" type="button">Another action</button>
+            <button id="logout-btn" class="dropdown-item" type="button">Đăng xuất</button>
+          </div>
+        </div>
+      </div>
+      <div class="notsign">
+        <span>
+          <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modalLoginForm">Login</button>            
+        </span>
+        <span>
+          <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modalSignUpForm">Sign up</button>       
+        </span>
+      </div>
+      
+    </div>
+  </nav>
+    
+  <div class="container menu-bar">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="../home/index">Home Page</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../album/index">Album</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../chart/index">Chart</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="../singers/index">Singer</a>
+      </li>
+    </ul>
+  </div>
+  
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--modal sign up-->
+<div class="modal fade" id="modalSignUpForm" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header text-center">
+                  <h4 class="modal-title w-100 font-weight-bold" style="font-size: 1.5rem;">Sign Up</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body mx-3">
+                  <div class="md-form mb-5">
+                      <i class="fas fa-user prefix grey-text"></i>
+                      <input type="text"  class="form-control validate orangeForm-name"
+                          placeholder="Your name">
+                  </div>
+                  <div class="md-form mb-5">
+                      <i class="fas fa-envelope prefix grey-text"></i>
+                      <input type="email" id="orangeForm-email" class="form-control validate"
+                          placeholder="Your email">
+                  </div>
+
+                  <div class="md-form mb-5">
+                      <i class="fas fa-lock prefix grey-text"></i>
+                      <input type="password" id="orangeForm-cur-pass" class="form-control validate"
+                          placeholder="Password">
+                  </div>
+                  <div class="md-form mb-5">
+                      <i class="fas fa-lock prefix grey-text"></i>
+                      <input type="password"  class="form-control validate orangeForm-new-pass"
+                          placeholder="Retype password">
+                  </div>
+
+              </div>
+              <div class="modal-footer d-flex justify-content-center">
+                  <button class="btn" data-dismiss="modal">Sign up</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!--modal sign up-->
+  <!--modal login-->
+  <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-hidden="true"  style="border-radius: 10%;">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="card">
+                <h5 class="card-header white-text text-center py-4" style="background-color: rgb(101, 80, 158);">
+                  <strong>LOG IN</strong>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </h5>
+                <!--Card content-->
+                <div class="card-body px-lg-5 pt-0">
+                  <!-- Form -->
+                  <form class="text-center" style="color: #757575;">
+                    <!-- Email -->
+                    <div class="md-form">
+                      <i class="fas fa-user prefix grey-text" style="left: -2px; top: 14px;"></i>
+                      <input type="email" id="materialLoginFormEmail" class="form-control" placeholder="E-mail">
+                      <div id="wrong-info"></div>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="md-form">
+                      <i class="fas fa-lock prefix grey-text"  style="left: -2px; top: 14px;"></i>
+                      <input type="password" id="materialLoginFormPassword" class="form-control" placeholder="Password">
+                    </div>
+
+                    <div class="d-flex justify-content-around">
+                      <div>
+                        <!-- Remember me -->
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="materialLoginFormRemember">
+                          <label class="form-check-label" for="materialLoginFormRemember">Remember me</label>
+                        </div>
+                      </div>
+                      <div>
+                        <!-- Forgot password -->
+                        <a  href="">Forgot password?</a>
+                      </div>
+                    </div>
+
+                    <!-- Sign in button -->
+                    <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
+
+                    <!-- Register -->
+                    <p>Not a member?
+                      <a  data-toggle="modal" data-target="#modalSignUpForm" data-dismiss="modal">Register</a>
+                    </p>
+                  </form>
+                  <!-- Form -->
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!--modal login-->
+
+
+<script>
+  $( document ).ready(function(){
+          $('.notsign').show();
+      $('.signed').hide();
+    
+    $('#logout-btn').click(function(){
+            $('.notsign').show();
+      $('.signed').hide();
+    })
+    $('#modalLoginForm form').submit(function(event){
+      event.preventDefault();
+      console.log($('#modalLoginForm form').serialize())
+      $.ajax({
+        method: "POST",
+        url: "/web-191/controllers/LoginController.php",
+        data: {
+          username: $('#modalLoginForm form #materialLoginFormEmail').val(),
+          password: $('#modalLoginForm form #materialLoginFormPassword').val()
+        }
+      })
+      .done(function( msg ) {
+        if(msg == '0'){
+          $('#wrong-info').text('wrong input');
+        }
+        else{
+          $('.signed').show();
+          $('.notsign').hide();
+          $('#modalLoginForm').modal('toggle');
+        }
+
+      });
+    })
+  })
+  
+</script>
+
+  <div class="body-content container">
+    <div class="row">
+      <div class="col-12 col-lg-8">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators" style="z-index: 0;">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href=""><img class="d-block w-100" src="/web-191/public/images/backgrounds/11.jpg" alt="First slide"></a>
+            </div>
+            <div class="carousel-item">
+              <a href=""><img class="d-block w-100" src="/web-191/public/images/backgrounds/22.jpg" alt="Second slide"></a>
+            </div>
+            <div class="carousel-item">
+              <a href=""><img class="d-block w-100" src="/web-191/public/images/backgrounds/33.jpg" alt="Third slide"></a>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+          <!-- Hot category -->
+          <div class="hot-category">
+            <h3 style="margin-bottom: 10px;" class="title-name">Chủ Đề & Thể Loại > </h3>
+            <div id="hotCategoryIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators" style="z-index: 0;">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row categories">
+                    <!-- List First categories -->
+                    
+                        <div class="col-6 col-md-6 single-song col-sm-6 col-lg-3">
+                            <div class="related_row">
+                                <div class="related_component">
+                                  <a href="../user/single"><img class="related_row_img" src="https://data.chiasenhac.com/data/cover/70/69434.jpg"
+                                        alt="related1"></a>
+                                </div>
+                                <div class="name-singer">
+                                    <div class="name">Cà phê</div>
+                                </div>
+                                <div class="icon-play">
+                                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                          </div>
+                          
+                        <div class="col-6 col-md-6 single-song col-sm-6 col-lg-3">
+                            <div class="related_row">
+                                <div class="related_component">
+                                  <a href="../user/single"><img class="related_row_img" src="https://data.chiasenhac.com/data/cover/113/112748.jpg"
+                                        alt="related1"></a>
+                                </div>
+                                <div class="name-singer">
+                                    <div class="name">Thư Giãn</div>
+                                </div>
+                                <div class="icon-play">
+                                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                          </div>
+                          
+                        <div class="col-6 col-md-6 single-song col-sm-6 col-lg-3">
+                            <div class="related_row">
+                                <div class="related_component">
+                                  <a href="../user/single"><img class="related_row_img" src="https://data.chiasenhac.com/data/cover/75/74260.jpg"
+                                        alt="related1"></a>
+                                </div>
+                                <div class="name-singer">
+                                    <div class="name">Nhạc Việt</div>
+                                </div>
+                                <div class="icon-play">
+                                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                          </div>
+                          
+                        <div class="col-6 col-md-6 single-song col-sm-6 col-lg-3">
+                            <div class="related_row">
+                                <div class="related_component">
+                                  <a href="../user/single"><img class="related_row_img" src="https://data.chiasenhac.com/data/cover/113/112897.jpg"
+                                        alt="related1"></a>
+                                </div>
+                                <div class="name-singer">
+                                    <div class="name">Nhạc Mùa Đông</div>
+                                </div>
+                                <div class="icon-play">
+                                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                          </div>
+                                              <!-- end --> 
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row categories">
+                    <!-- List Second categories -->
+                    
+                        <div class="col-6 col-md-6 single-song col-sm-6 col-lg-3">
+                            <div class="related_row">
+                                <div class="related_component">
+                                  <a href="../user/single"><img class="related_row_img" src="https://data.chiasenhac.com/data/cover/113/112896.jpg"
+                                        alt="related1"></a>
+                                </div>
+                                <div class="name-singer">
+                                    <div class="name">Tình Yêu</div>
+                                </div>
+                                <div class="icon-play">
+                                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                          </div>
+                          
+                        <div class="col-6 col-md-6 single-song col-sm-6 col-lg-3">
+                            <div class="related_row">
+                                <div class="related_component">
+                                  <a href="../user/single"><img class="related_row_img" src="https://data.chiasenhac.com/data/cover/113/112894.jpg"
+                                        alt="related1"></a>
+                                </div>
+                                <div class="name-singer">
+                                    <div class="name">Nỗi Buồn</div>
+                                </div>
+                                <div class="icon-play">
+                                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                          </div>
+                          
+                        <div class="col-6 col-md-6 single-song col-sm-6 col-lg-3">
+                            <div class="related_row">
+                                <div class="related_component">
+                                  <a href="../user/single"><img class="related_row_img" src="https://data.chiasenhac.com/data/cover/88/87493.jpg"
+                                        alt="related1"></a>
+                                </div>
+                                <div class="name-singer">
+                                    <div class="name">Nhạc Âu Mĩ</div>
+                                </div>
+                                <div class="icon-play">
+                                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                          </div>
+                          
+                        <div class="col-6 col-md-6 single-song col-sm-6 col-lg-3">
+                            <div class="related_row">
+                                <div class="related_component">
+                                  <a href="../user/single"><img class="related_row_img" src="https://data.chiasenhac.com/data/cover/54/53532.jpg"
+                                        alt="related1"></a>
+                                </div>
+                                <div class="name-singer">
+                                    <div class="name">K-POP</div>
+                                </div>
+                                <div class="icon-play">
+                                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                          </div>
+                                              <!-- end -->
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#hotCategoryIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"
+                  style="background-color: rgb(101, 80, 158); z-index: 0;"></span>
+
+              </a>
+              <a class="carousel-control-next" href="#hotCategoryIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"
+                  style="background-color: rgb(101, 80, 158);"></span>
+
+              </a>
+            </div>
+          </div>
+
+          <!--hot singer-->
+          <div class="hot-singer">
+            <h3 style="margin-bottom: 10px;" class="title-name">Nghệ Sĩ > </h3>
+            <div id="hotSingerIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators" style="z-index: 0;">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row singers">
+                    
+                      <div class="col-6 col-md-6 single-song col-sm-6 col-lg-3">
+                          <div class="related_row">
+                              <div class="related_component">
+                                  <a href="../user/single"><img class="related_row_img" src="https://data.chiasenhac.com/data/cover/103/102994.jpg"
+                                      alt="related1"></a>
+                              </div>
+                              <div class="name-singer">
+                                  <div class="name">Jack & K-ICM</div>
+                              </div>
+                              <div class="icon-play">
+                                  <i class="fa fa-play-circle" aria-hidden="true"></i>
+                              </div>
+                          </div>
+                        </div>
+                        
+                      <div class="col-6 col-md-6 single-song col-sm-6 col-lg-3">
+                          <div class="related_row">
+                              <div class="related_component">
+                                  <a href="../user/single"><img class="related_row_img" src="https://data.chiasenhac.com/data/cover/111/110656.jpg"
+                                      alt="related1"></a>
+                              </div>
+                              <div class="name-singer">
+                                  <div class="name">AMEE</div>
+                              </div>
+                              <div class="icon-play">
+                                  <i class="fa fa-play-circle" aria-hidden="true"></i>
+                              </div>
+                          </div>
+                        </div>
+                        
+                      <div class="col-6 col-md-6 single-song col-sm-6 col-lg-3">
+                          <div class="related_row">
+                              <div class="related_component">
+                                  <a href="../user/single"><img class="related_row_img" src="https://data.chiasenhac.com/data/cover/76/75903.jpg"
+                                      alt="related1"></a>
+                              </div>
+                              <div class="name-singer">
+                                  <div class="name">Ali Hoàng Dương</div>
+                              </div>
+                              <div class="icon-play">
+                                  <i class="fa fa-play-circle" aria-hidden="true"></i>
+                              </div>
+                          </div>
+                        </div>
+                        
+                      <div class="col-6 col-md-6 single-song col-sm-6 col-lg-3">
+                          <div class="related_row">
+                              <div class="related_component">
+                                  <a href="../user/single"><img class="related_row_img" src="https://data.chiasenhac.com/data/cover/96/95487.jpg"
+                                      alt="related1"></a>
+                              </div>
+                              <div class="name-singer">
+                                  <div class="name">Black Pink</div>
+                              </div>
+                              <div class="icon-play">
+                                  <i class="fa fa-play-circle" aria-hidden="true"></i>
+                              </div>
+                          </div>
+                        </div>
+                                          </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row singers">
+                    
+                        <div class="col-6 col-md-6 single-song col-sm-6 col-lg-3">
+                            <div class="related_row">
+                                <div class="related_component">
+                                    <a href="../user/single"><img class="related_row_img" src="https://data.chiasenhac.com/data/cover/45/44982.jpg"
+                                        alt="related1"></a>
+                                </div>
+                                <div class="name-singer">
+                                    <div class="name">Trúc Nhân</div>
+                                </div>
+                                <div class="icon-play">
+                                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                          </div>
+                          
+                        <div class="col-6 col-md-6 single-song col-sm-6 col-lg-3">
+                            <div class="related_row">
+                                <div class="related_component">
+                                    <a href="../user/single"><img class="related_row_img" src="https://data.chiasenhac.com/data/cover/62/61107.jpg"
+                                        alt="related1"></a>
+                                </div>
+                                <div class="name-singer">
+                                    <div class="name">Sơn Tùng M-TP</div>
+                                </div>
+                                <div class="icon-play">
+                                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                          </div>
+                          
+                        <div class="col-6 col-md-6 single-song col-sm-6 col-lg-3">
+                            <div class="related_row">
+                                <div class="related_component">
+                                    <a href="../user/single"><img class="related_row_img" src="https://data.chiasenhac.com/data/cover/64/63313.jpg"
+                                        alt="related1"></a>
+                                </div>
+                                <div class="name-singer">
+                                    <div class="name">Lou Hoàng</div>
+                                </div>
+                                <div class="icon-play">
+                                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                          </div>
+                          
+                        <div class="col-6 col-md-6 single-song col-sm-6 col-lg-3">
+                            <div class="related_row">
+                                <div class="related_component">
+                                    <a href="../user/single"><img class="related_row_img" src="https://data.chiasenhac.com/data/cover/105/104856.jpg"
+                                        alt="related1"></a>
+                                </div>
+                                <div class="name-singer">
+                                    <div class="name">Quân A.P</div>
+                                </div>
+                                <div class="icon-play">
+                                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                          </div>
+                                            </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#hotSingerIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"
+                  style="background-color: rgb(101, 80, 158); z-index: 0;"></span>
+
+              </a>
+              <a class="carousel-control-next" href="#hotSingerIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"
+                  style="background-color: rgb(101, 80, 158);"></span>
+
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="col-12 col-lg-4 right_content">
+        <div class="image_VN">
+            <a href="">
+                <img class="anhXepHang" src="/web-191/public/images/categories/ca_si_viet_nam.jpg" />
+            </a>
+        </div>
+        <div class="image_BaiHitMoi">
+            <img class="anhXepHang" src="/web-191/public/images/categories/nhung_bai_hit_moi.jpg" />
+        </div>
+        <div class="image_NhacPhim">
+            <img class="anhXepHang" src="/web-191/public/images/categories/nhac_phim.jpg" />
+        </div>
+        <div class="image_NhacHot">
+            <img class="anhXepHang" src="/web-191/public/images/categories/nhac_hot.jpg" />
+        </div>
+        <div class="song-list">
+          <h3 class="title-name">Bảng Xếp Hạng</h3>
+          <div class="song">
+            <div class="poster">
+              <img src="/web-191/public/images/songs/cnnl.jpg" alt="Chang-noi-nen-loi" />
+            </div>
+            <div class="media-player">
+              <div id="songTitle" style="font-family: 'Lato', sans-serif;">Chẳng nói nên lời</div>
+              <div class="action-song">
+
+                <button id="pre" onclick="pre()"><i class="fas fa-backward"></i></button>
+                <button id="play" onclick="playOrPauseSong()"><i class="fas fa-play"></i></button>
+                <button id="next" onclick="next()"><i class="fas fa-forward"></i></button>
+              </div>
+              <div class="time-song">
+                <div class="slidecontainer">
+                  <input type="range" min="1" max="100" value="0" class="slider" id="sider-song">
+                  <div id="fill-player"></div>
+                </div>
+                <div class="time-display">
+                  <span id="start">00:00</span>
+                  <span id="end">00:00</span>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-group songs">
+            <a href="#" class="list-group-item list-group-item-action active">
+              <div class="num-song">1</div>
+              <img class="icon-song" src="/web-191/public/images/songs/cnnl.jpg" alt="Chang-noi-nen-loi">
+              <div class="name-song">
+                <div class="name">Chẳng nói nên lời</div>
+                <div class="singer">Hoàng Dũng</div>
+              </div>
+
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="num-song">2</div>
+              <img class="icon-song" src="/web-191/public/images/songs/smc.jpeg" alt="Sang-mat-chua" />
+              <div class="name-song">
+                <div class="name">Sáng mắt chưa</div>
+                <div class="singer">Trúc Nhân</div>
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="num-song">3</div>
+              <img class="icon-song" src="/web-191/public/images/songs/xe.jpg" alt="xe.jpg" />
+              <div class="name-song">
+                <div class="name">Xa em</div>
+                <div class="singer">Noo Phước Thịnh</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hot-album col-12">
+        <h3 class="title-name">Album Hot > </h3>
+        <div class="row albums">
+        <!-- List Ablum Hot -->
+          
+              <div class="col-6 col-md-6 single-song col-sm-6 col-lg-2">
+                <div class="related_row">
+                    <div class="related_component">
+                        <a href="../user/single"><img class="related_row_img" src="https://data.chiasenhac.com/data/cover/103/102271.jpg"
+                            alt="related1"></a>
+                    </div>
+                    <div class="name-singer">
+                        <div class="name">Cảm Giác Lúc Ấy Sẽ Ra Sao</div>
+                        <div class="singer">Lou Hoàng</div>
+                    </div>
+                    <div class="icon-play">
+                        <i class="fa fa-play-circle" aria-hidden="true"></i>
+                    </div>
+                </div>
+              </div>
+              
+              <div class="col-6 col-md-6 single-song col-sm-6 col-lg-2">
+                <div class="related_row">
+                    <div class="related_component">
+                        <a href="../user/single"><img class="related_row_img" src="https://data.chiasenhac.com/data/cover/71/70962.jpg"
+                            alt="related1"></a>
+                    </div>
+                    <div class="name-singer">
+                        <div class="name">Từ Bỏ</div>
+                        <div class="singer">Erik</div>
+                    </div>
+                    <div class="icon-play">
+                        <i class="fa fa-play-circle" aria-hidden="true"></i>
+                    </div>
+                </div>
+              </div>
+              
+              <div class="col-6 col-md-6 single-song col-sm-6 col-lg-2">
+                <div class="related_row">
+                    <div class="related_component">
+                        <a href="../user/single"><img class="related_row_img" src="https://chiasenhac.vn/storage/data/artist_avatar/4/3580.jpg"
+                            alt="related1"></a>
+                    </div>
+                    <div class="name-singer">
+                        <div class="name">Mưa</div>
+                        <div class="singer">Trung Quân</div>
+                    </div>
+                    <div class="icon-play">
+                        <i class="fa fa-play-circle" aria-hidden="true"></i>
+                    </div>
+                </div>
+              </div>
+              
+              <div class="col-6 col-md-6 single-song col-sm-6 col-lg-2">
+                <div class="related_row">
+                    <div class="related_component">
+                        <a href="../user/single"><img class="related_row_img" src="https://data.chiasenhac.com/data/cover/108/107880.jpg"
+                            alt="related1"></a>
+                    </div>
+                    <div class="name-singer">
+                        <div class="name">Sáng Mắt Chưa</div>
+                        <div class="singer">Trúc Nhân</div>
+                    </div>
+                    <div class="icon-play">
+                        <i class="fa fa-play-circle" aria-hidden="true"></i>
+                    </div>
+                </div>
+              </div>
+              
+              <div class="col-6 col-md-6 single-song col-sm-6 col-lg-2">
+                <div class="related_row">
+                    <div class="related_component">
+                        <a href="../user/single"><img class="related_row_img" src="https://avatar-nct.nixcdn.com/song/2019/09/30/2/9/3/3/1569825708582_640.jpg"
+                            alt="related1"></a>
+                    </div>
+                    <div class="name-singer">
+                        <div class="name">Khó vẽ nụ cười</div>
+                        <div class="singer">Đạt G</div>
+                    </div>
+                    <div class="icon-play">
+                        <i class="fa fa-play-circle" aria-hidden="true"></i>
+                    </div>
+                </div>
+              </div>
+              
+              <div class="col-6 col-md-6 single-song col-sm-6 col-lg-2">
+                <div class="related_row">
+                    <div class="related_component">
+                        <a href="../user/single"><img class="related_row_img" src="https://data.chiasenhac.com/data/cover/105/104914.jpg"
+                            alt="related1"></a>
+                    </div>
+                    <div class="name-singer">
+                        <div class="name">Xinh Lung Linh</div>
+                        <div class="singer">Ali Hoàng Dương</div>
+                    </div>
+                    <div class="icon-play">
+                        <i class="fa fa-play-circle" aria-hidden="true"></i>
+                    </div>
+                </div>
+              </div>
+                      <!-- End -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+<footer class="page-footer font-small stylish-color-dark pt-4" style="margin-top: 150px; background-color: #1d1924;">      
+    <hr>
+  
+    <!-- Call to action -->
+    <ul class="list-unstyled list-inline text-center py-2">
+      <li class="list-inline-item">
+        <h5 class="mb-1">Register for free</h5>
+      </li>
+      <li class="list-inline-item">
+        <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
+      </li>
+    </ul>
+    <!-- Call to action -->
+  
+    <hr>
+  
+    <!-- Social buttons -->
+    <ul class="list-unstyled list-inline text-center">
+      <li class="list-inline-item">
+        <a class="btn-floating btn-fb mx-1">
+          <i class="fab fa-facebook-f"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-tw mx-1">
+          <i class="fab fa-twitter"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-gplus mx-1">
+          <i class="fab fa-google-plus-g"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-li mx-1">
+          <i class="fab fa-linkedin-in"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-dribbble mx-1">
+          <i class="fab fa-dribbble"> </i>
+        </a>
+      </li>
+    </ul>
+    <!-- Social buttons -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/"> ZingMp4.com</a>
+    </div>
+    <!-- Copyright -->
+  
+</footer>
+<!-- Footer -->  <script>
+    $(document).on("click", ".related_row_img", function(){
+      // $.ajax()
+    });
+  </script>
+  
+<script>
+  var songs = ["../assets/songs/changnoinenloi.mp3","../assets/songs/sangmatchua.mp3","../assets/songs/xaem.mp3"];
+  var names=['Chẳng nói nên lời', 'Sáng mắt chưa', 'Xa em']
+  var posters = ["/web-191/public/images/songs/cnnl.jpg","/web-191/public/images/songs/smc.jpeg","/web-191/public/images/songs/xe.jpg"]; 
+  $('#songTitle').text(names[0])
+  $('.poster img').attr('src',posters[0])
+  var song =new Audio()
+  currentSong = 0
+  song.src = songs[0]
+  console.log(song)
+  
+  function playOrPauseSong(){
+    // console.log("cccc")
+    if(song.paused){
+        song.play();
+        $('#play').html('<i class="fas fa-pause"></i>')
+      }
+      else {
+        song.pause();
+        $('#play').html('<i class="fas fa-play"></i>')
+      }
+    }
+    function next() {
+      currentSong++;
+      if (currentSong > 2) {
+        currentSong = 0;
+      }
+      numsong = currentSong + 1;
+      // console.log(numsong)
+      $('.songs').find('.num-song').each(function () {
+        console.log($(this))
+        if (Number($(this).text()) == numsong) {
+          $('.songs').find('.list-group-item-action').removeClass('active')
+          $(this).parents('.list-group-item-action').addClass('active')
+        }
+      })
+
+      song.src = songs[currentSong]
+      song.play()
+      $('#play').html('<i class="fas fa-pause"></i>')
+      $('#songTitle').text(names[currentSong])
+      $('.poster img').attr('src', posters[currentSong])
+    }
+    function pre() {
+      currentSong--;
+      if (currentSong < 0) {
+        currentSong = 2;
+      }
+      numsong = currentSong + 1;
+
+      $('.songs').find('.num-song').each(function () {
+        console.log($(this))
+        if (Number($(this).text()) == numsong) {
+
+          $('.songs').find('.list-group-item-action').removeClass('active')
+          $(this).parents('.list-group-item-action').addClass('active')
+        }
+      })
+
+      song.src = songs[currentSong]
+      song.play()
+      $('#play').html('<i class="fas fa-pause"></i>')
+      $('#songTitle').text(names[currentSong])
+      $('.poster img').attr('src', posters[currentSong])
+    }
+
+    song.addEventListener('loadeddata', function () {
+      $('.time-song #end').text(formatTime(parseInt(song.duration)))
+      $('#sider-song').attr('max', parseInt(song.duration))
+      this.addEventListener('timeupdate', function () {
+        $('#sider-song').val(parseInt(song.currentTime))
+        $('.time-song #start').text(formatTime(parseInt(song.currentTime)))
+        widthFill = (Number($('#sider-song').val()) / Number($('#sider-song').attr('max'))) * 100 + '%'
+        $('#fill-player').css('width', widthFill)
+      })
+    })
+    song.addEventListener('ended', function () {
+      next()
+    })
+    function formatTime(second) {
+      var hh = Math.floor(second / 3600)
+
+      var m = Math.floor((second - (hh * 3600)) / 60)
+      // console.log(second)
+      var ss = second - (hh * 3600) - (m * 60)
+      hh == 0 ? str_hh = "" : hh < 10 ? str_hh = ("0" + hh + ":") : str_hh = (hh.toString() + ":")
+      if (hh == 0) {
+        if (m == 0)
+          str_m = "00:"
+        else
+          m < 10 ? str_m = ('0' + m + ':') : str_m = (m.toString() + ":")
+      }
+      else {
+        m < 10 ? str_m = ('0' + m + ':') : str_m = (m.toString() + ":")
+      }
+      ss < 10 ? str_ss = "0" + ss : str_ss = ss.toString()
+      return str_hh + str_m + str_ss
+
+    }
+  </script>
+</body>
+
+</html>

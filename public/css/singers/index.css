@@ -1,0 +1,44 @@
+.title-name{
+  font-size: 30px;
+  font-weight: 700;
+}
+.header-singers{
+  margin-left: 15px;
+  margin-right: 40px;
+}
+.header-singers .title{
+  font-size: 30px;
+  font-weight: 700px;
+}
+.header-singers .link-all{
+  float: right;
+  padding-top: 10px;
+}
+#navtab-singer-type{
+  border-bottom: none;
+}
+.wrapper-singers{
+  text-align: center;
+  /* background-color: #f9f9f9; */
+}
+.card-singer{
+  height: 350px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #ccffff;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding-top: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.card-singer img{
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.card-singer .singer-name{
+  font-weight: 700;
+  font-size: 25px;
+}
